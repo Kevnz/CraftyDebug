@@ -132,7 +132,7 @@ Crafty.extend({
                 template;
 
             styles = '<style>'+Crafty.debugBar.template.styles.join('')+'</style>';
-            $('head').append(styles);
+            document.querySelector('head').appendChild(styles); 
 
             template = '<div id="crafty-debug">'+
                                 '<ul class="menu">'+
@@ -140,8 +140,7 @@ Crafty.extend({
                                 '</ul>'+
                                 Crafty.debugBar.template.panelBoxes.join('')+
                             '</div>';
-
-            $('body').append(template);
+            document.querySelector('body').appendChild(template); 
         }
     }
 });
